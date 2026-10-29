@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cocina Verde — Recetas para comer bien</title>
+<meta name="description" content="Descubre recetas saludables para cada día, con ingredientes, pasos claros y datos nutricionales aproximados.">
+<meta name="theme-color" content="#F2F0E2">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="Cocina Verde">
+<meta property="og:title" content="Cocina Verde — Recetas para comer bien">
+<meta property="og:description" content="Descubre recetas saludables para cada día, con ingredientes, pasos claros y datos nutricionales aproximados.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Cocina Verde — Recetas para comer bien">
+<meta name="twitter:description" content="Descubre recetas saludables para cada día, con ingredientes, pasos claros y datos nutricionales aproximados.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="topbar">RECETAS PROBADAS EN CASA · ACTUALIZADO CADA SEMANA</div>
+
+<header>
+  <div class="header-row">
+    <div class="logo"><span class="logo-mark">🌿</span>Cocina Verde</div>
+    <div class="search-wrap">
+      <span class="search-icon">⌕</span>
+      <input type="text" id="searchInput" placeholder="Busca por receta o ingrediente…" aria-label="Buscar recetas">
+    </div>
+  </div>
+  <div class="pills" id="pillRow">
+    <button class="pill active" type="button" aria-pressed="true" data-cat="Todas">Todas</button>
+    <button class="pill" type="button" aria-pressed="false" data-cat="Desayuno">Desayuno</button>
+    <button class="pill" type="button" aria-pressed="false" data-cat="Almuerzo">Almuerzo</button>
+    <button class="pill" type="button" aria-pressed="false" data-cat="Cena">Cena</button>
+    <button class="pill" type="button" aria-pressed="false" data-cat="Snack">Snacks</button>
+    <button class="pill" type="button" aria-pressed="false" data-cat="Postre">Postres saludables</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Comer bien, <em>sin complicarse</em>.</h1>
+    <p>Más de 20 recetas saludables para el día a día: desayunos rápidos, almuerzos que rinden, cenas livianas, snacks y postres con buena conciencia. Cada una con su ficha nutricional y pasos claros.</p>
+    <div class="stats">
+      <div class="stat"><b id="statTotal">0</b><span>Recetas</span></div>
+      <div class="stat"><b id="statTime">0</b><span>Min. promedio</span></div>
+      <div class="stat"><b>5</b><span>Categorías</span></div>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="plate">🥗</div>
+    <div class="caption">Recetas frescas, simples y nutritivas</div>
+  </div>
+</section>
+
+<div class="trust">
+  <div>⏱ Todas con tiempo de preparación real</div>
+  <div>◆ Niveles de dificultad claros</div>
+  <div>🧾 Ficha nutricional por porción</div>
+  <div>🖨 Listas para imprimir</div>
+</div>
+
+<main>
+  <div class="section-head">
+    <h2>Todas las recetas</h2>
+    <div id="results-info" role="status" aria-live="polite" aria-atomic="true"></div>
+  </div>
+  <div class="grid" id="grid"></div>
+</main>
+
+<footer>
+  <div class="foot-logo">🌿 Cocina Verde</div>
+  <p>Recetas pensadas para cocinar rápido, comer rico y sentirse bien.</p>
+  <p>Los datos nutricionales son aproximados. Si tienes alergias o necesitas evitar el gluten, verifica las etiquetas de los productos y la contaminación cruzada.</p>
+</footer>
+
+<div class="overlay" id="overlay" role="presentation">
+  <div class="modal" id="modalContent" role="dialog" aria-modal="true" aria-labelledby="modalTitle"></div>
+</div>
+
+<script src="app.js" defer></script>
+
+</body>
+</html>
+
